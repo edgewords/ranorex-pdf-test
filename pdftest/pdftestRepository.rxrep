@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<repository
+name="pdftestRepository"
+id="83d7df61-de07-4688-8030-d9607fcd62cb"
+rxversion="8.3">
+  <codegen
+  classname="pdftestRepository"
+  namespace="pdftest"/>
+  <rootfolder
+  name="Root"
+  id="fd51686f-c033-49c4-865a-33b11254ef4b"
+  searchtimeout="30000ms"
+  capname="unknown"
+  isrooted="True"
+  usecache="True">
+    <basepath/>
+  </rootfolder>
+  <variables/>
+</repository>
