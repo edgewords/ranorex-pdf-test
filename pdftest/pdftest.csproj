@@ -165,6 +165,9 @@
     <Compile Include="AssemblyInfo.cs">
       <id>bc81f5ba-9d51-4f55-9d5f-a7115695dcb6</id>
     </Compile>
+    <Compile Include="FuncLib.cs">
+      <id>bda82336-46d5-4b8b-bffb-65ab9a49467b</id>
+    </Compile>
     <Compile Include="pdftestRepository.cs">
       <BoundTo>94728ce2-c388-47de-a721-fdc9dc55f81f</BoundTo>
       <DependentUpon>pdftestRepository.rxrep</DependentUpon>

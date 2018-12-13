@@ -29,6 +29,42 @@ rxversion="8.3">
 	<variables>
 	</variables>
 	<recorditems>
+		<userrecorditem
+		classname="FuncLib"
+		enabled="True"
+		isexternaltestmethod="True"
+		methodname="GetXFAfieldValue"
+		namespace="pdftest"
+		optional="False"
+		varname="">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<arguments
+			id="277742d5-5fec-4cd4-af26-fb4748e733df">
+				<argument
+				argname="path"
+				id="1be285ef-7acd-4903-9a3b-dae28bee861b">
+					<argvaluetype>
+						System.String
+					</argvaluetype>
+					<argvalue>
+						C:\Users\tom\Documents\eForm_example.pdf
+					</argvalue>
+				</argument>
+				<argument
+				argname="FieldName"
+				id="74f9a779-dce1-4569-b9c9-4c371735bc4d">
+					<argvaluetype>
+						System.String
+					</argvaluetype>
+					<argvalue>
+						CONTRACT_ID
+					</argvalue>
+				</argument>
+			</arguments>
+		</userrecorditem>
 	</recorditems>
 	<repository
 	id="83d7df61-de07-4688-8030-d9607fcd62cb"

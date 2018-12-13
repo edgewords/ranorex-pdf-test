@@ -19,6 +19,7 @@ using iText.Forms.Xfa;
 using System.Xml;
 using System.Xml.Linq;
 using System.Xml.XPath;
+using System.Linq;
 
 using Microsoft.Office.Interop.Word;
 
@@ -86,20 +87,27 @@ namespace pdftest
 
 			// Try to open the Xfa dynamic acrobat form as xml document
 			
-            //doc = AC.Documents.Open(ref filename, ref missing, ref readOnly, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref isVisible, ref isVisible, ref missing, ref missing, ref missing);  
-            //Ranorex.Report.Info(doc.Content.Text); 
-
-        		//application.Open(@"C:\Users\tom\Documents\Property_policy_sample.doc");
-        	
+			// https://csharp.hotexamples.com/examples/iTextSharp.text.pdf/XfaForm/-/php-xfaform-class-examples.html
+			
+		
             PdfReader newreader = new PdfReader(@"C:\Users\tom\Documents\eForm_example.pdf");
             PdfDocument pdfDoc = new PdfDocument(newreader);
             
             XfaForm xfa = new XfaForm (pdfDoc);
             if (xfa.IsXfaPresent()){
-            	var elExist = xfa.FindFieldName("CONTRACTS[0].CONTRACT[0].CONTRACT_ID[0]");
-            	Ranorex.Report.Info(elExist.ToString());
-            	var retVal = xfa.GetXfaFieldValue("CONTRACTS[0].CONTRACT[0].CONTRACT_ID[0]");
-            	Ranorex.Report.Info(retVal.ToString());
+            	
+            	XDocument myXMLDoc = xfa.GetDomDocument();
+            	IEnumerable<XElement> mylist =myXMLDoc.Descendants("CONTRACT_ID");
+            	List<XElement> mylistt = mylist.ToList<XElement>();
+            	Report.Info (mylistt[0].Value);
+            	
+            	// or if more than one, you can cycle through:
+            	/***
+            	foreach (XElement theEl in mylist){
+            		Report.Info(theEl.Value);
+            	}
+
+				***/
             }
             
             else{

@@ -79,6 +79,9 @@ namespace pdftest
 
             Init();
 
+            FuncLib.GetXFAfieldValue("C:\\Users\\tom\\Documents\\eForm_example.pdf", "CONTRACT_ID");
+            Delay.Milliseconds(0);
+            
         }
 
 #region Image Feature Data

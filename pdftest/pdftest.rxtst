@@ -12,6 +12,12 @@ rxversion="8.3">
 			name="pdftest"
 			reportlevel="Info;20">
 			</testcase>
+			<testmodule
+			id="86179481-a578-461f-ad38-38d8729ee65e"
+			name="Recording1"
+			ref="9ecd25bc-cab3-4e9a-aec3-7c0208969ab8"
+			type="Recording">
+			</testmodule>
 			<testsuite
 			ReportTime="RelativeToTestSuiteStartTime"
 			TracingScreenshotMode="Foreground"
@@ -46,6 +52,10 @@ rxversion="8.3">
 						<testmodule
 						id="bc4a257a-5dea-4f18-b7b4-af96d82f6f58"
 						name="UserCodeModule1">
+						</testmodule>
+						<testmodule
+						id="86179481-a578-461f-ad38-38d8729ee65e"
+						name="Recording1">
 						</testmodule>
 					</testcase>
 				</testcase>
